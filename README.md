@@ -8,4 +8,4 @@ Feel free to explore the code, experiment, and follow along. Your feedback and c
 - **React Fundamentals:** From understanding JSX to mastering Hooks, this repo covers all the core concepts of React.
 - **Mini Projects:** Hands-on mini-projects that reinforce my learning. The code is clean, well-structured, and designed to be scalable.
 - **Code Snippets & Best Practices:** Snippets that highlight best practices, common patterns, and useful utilities in React.
-- **Project Links:** Check out live demos of the projects on my [project account](https://github.com/MishraShardendu22).
+- **Project Links:** Check out live demos of the projects on my [MishraShardendu22](https://github.com/MishraShardendu22).
