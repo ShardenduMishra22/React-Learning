@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React,{ useState } from 'react';
+import './index.css';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+function App(){
+    let [cnt,SetCnt] = useState(0);
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    // this will however change the value as all the 
+    // fucntion will return values all the times so
+    // batching wont work 
+
+    // const AddValue = () => {
+    //     SetCnt((cnt) => cnt + 1);
+    //     SetCnt((cnt) => cnt + 1);
+    //     SetCnt((cnt) => cnt + 1);
+    //     SetCnt((cnt) => cnt + 1);
+    // }
+
+    // this wont increase the value by 4 because of
+    // batching ,as SetCnt will always extract values 
+    // from original function only.
+    
+    // const AddValue = () => {
+    //     SetCnt(cnt + 1);
+    //     SetCnt(cnt + 1);
+    //     SetCnt(cnt + 1);
+    //     SetCnt(cnt + 1);
+    // }
+    
+    const AddValue = () => {
+        SetCnt(cnt + 1);
+    }
+
+    const SubValue = () => {
+        SetCnt(cnt - 1);
+    }
+    
+    return(
+        <>
+            <h1>Whats the count : {cnt}</h1>
+            <h1>The count is : {cnt}</h1>
+            <button onClick={AddValue}> Add Value </button>
+            <button onClick={SubValue}> Sub Value </button>
+        </>
+    );
 }
 
-export default App
+export default App;
